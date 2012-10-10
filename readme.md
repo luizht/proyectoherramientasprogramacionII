@@ -9,6 +9,10 @@ Integrantes <br/>
 William cifuentes Rivera <br/>
 Luis eduardo arango<br/>
 
+Revisado por:
+
+Leidy Carolina Henao <br/> 
+kevin Arenas
 
 REVISOR
 ----------------------------------------
