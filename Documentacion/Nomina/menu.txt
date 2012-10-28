@@ -1,0 +1,6 @@
+menu
+
+editar perfil
+ingresar datos
+generar informe
+salir

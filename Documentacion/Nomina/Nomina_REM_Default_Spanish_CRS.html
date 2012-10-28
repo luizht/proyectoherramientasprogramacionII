@@ -40,10 +40,16 @@
 <h3>Fecha 02/10/2012</h3>
 <p />
 <h3>Preparado para:</h3>
-<p><font color="red">?</font></p>
+<a href="#ORG-0001" title="Nomina">
+<p>
+Nomina</p>
+</a>
 <p />
 <h3>Preparado por:</h3>
-<p><font color="red">?</font></p>
+<a href="#ORG-0002" title="Todo Software">
+<p>
+Todo Software</p>
+</a>
 <p />
 </center>
 <hr size="4" />
@@ -106,6 +112,69 @@ Prototipos</a>
 <a href="#SEC-0013">
 Aplicacion Movil</a>
 </td>
+</tr>
+<tr>
+<th align="left" valign="top">4 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0015">
+Requisitos</a>
+</th>
+</tr>
+<tr><td />
+<td align="left" valign="top">4.1 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0018">
+Funcionales</a>
+</td>
+</tr>
+<tr><td /><td />
+<td albgn="left" valign="top">4.1.1 </td>
+<td align="left" valign="top" width="100%">
+<a href="#SEC-0021">
+Nomina Movil</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">4.2 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0019">
+De Informacion</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">4.3 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0020">
+No Funcionales</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">5 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0016">
+Casos de Uso</a>
+</th>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.1 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0022">
+Actores</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.2 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0023">
+Casos de Uso</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">6 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0017">
+ Glosario</a>
+</th>
 </tr>
 </table>
 <p />
@@ -272,11 +341,13 @@ Contexto</h1><a name="SEC-0002" />
 <h2 align="left">3.1 
 Enunciado</h2><a name="GLO-0001" />
 <p align="left">
-<b> Contexto de Operacion:</b>El usuario manifiesta la necesidad de implementar  una aplicacion que solucione de manera facil, agiìl, confiable y eficaz lo complejo que aveces parace ser realizar una nomina o los cobros de las actividades desarrolladas por los trabajadores.
+<b> Contexto de Operacion:</b> El usuario manifiesta la necesidad de implementar  una aplicacion que solucione de manera facil, agiìl, confiable y eficaz lo complejo que aveces parace ser realizar una nomina o los cobros de las actividades desarrolladas por el mismo
 <br />
-<br />se pretende crear una aplicacion que permita la configuracion de un perfil con el fin de determinar si es un empleado o un independiente y apartir de esto establecer un valor de hora y por ende un salario.
+<br />se pretende crear una aplicacion que permita la configuracion de un perfil con el fin de determinar si es un empleado o un independiente y apartir de esto establecer un valor de hora, valor dia, dias laborados y por ende un salario.
 <br />
-<br />con esta aplicacion se puede determinar con antelacion un valor posible de nomina y asi el usuario podra organizar sus gastos y establecer su plan de ahorro.</p>
+<br />con esta aplicacion se puede determinar con antelacion un valor posible de nomina y asi el usuario podra organizar sus gastos y establecer su plan de ahorro.
+<br />
+<br />Esta aplicacion permitira tener un alcance no solo personal sino tambien empresarial, pues permitira generar un <a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">informe</a> completo de todos los datos de el usuario y posteriormente podra ser impresa al ser llevada a la computadora.</p>
 <a name="SEC-0003" />
 <h2 align="left">3.2 
 Necesidades</h2><a name="OBJ-0001" />
@@ -512,17 +583,105 @@ Ninguno</td>
 </tr>
 </table>
 <p />
+<a name="OBJ-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">OBJ-0004</th>
+<th align="left" valign="top" width="100%">
+Generar <a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">Informe</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+Permitir generar un <a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">informe</a> con todos los datos inialmente ingresados de manera que se pueda obterner una vista completa de la nomina</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Subobjetivos</th>
+<td align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">quedaría bien</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
 <a name="SEC-0008" />
 <h2 align="left">3.3 
 Caracteristicas</h2><a name="PRG-0003" />
 <p>
-<br />Administrar perfiles: El sistema permitira Crear,Actualizar,Borrar, Consultar.
+<br />EL SISTEMA
+<br />-Administrar perfiles: El sistema permitira Crear,Actualizar,Borrar, Consultar.
 <br />
-<br />Realizar Consultas: (independientes) El usuario podrá realizar consultas desde su dispositivo movil de los pagos recibidos y horas laboradas 
+<br />CONSULTAS
+<br />-Realizar Consultas: (independientes) El usuario podrá realizar consultas desde su dispositivo movil de los pagos recibidos y horas laboradas 
 <br />
-<br />(Empleado)-  El usuario podra consultar los detalles de los pagos realizados en quincenas pasadas
+<br />-(Empleado)-  El usuario podra consultar los detalles de los pagos realizados en quincenas pasadas
 <br />
-<br />Generar valor ahorro : El usuario podra visualizar lo que corresponde al ahorro de acuerdo al valor devengado
+<br />AHORRO
+<br />-Generar valor ahorro : El usuario podra visualizar lo que corresponde al ahorro de acuerdo al valor devengado
+<br />
+<br />
+<a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">INFORME</a>
+<br />-Generar un <a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">informe</a> de manera que en un solo pantallazo se puedan obtener lo mas relevante de la nomina.
+<br />
+<br />IMPRESION
+<br />- Ejecutar una impresion al ainforme para que posteriormente sea entregada al empleador
 <br />
 <br />
 </p>
@@ -540,5 +699,1660 @@ Configurar Perfil</h4><a name="GRF-0001" />
 <b>Figura 1</b>:
                 
 Flujo</p>
+<a name="SEC-0015" />
+<h1 align="left">4 
+Requisitos</h1><a name="SEC-0018" />
+<h2 align="left">4.1 
+Funcionales</h2><a name="SEC-0021" />
+<h3 align="left">4.1.1 
+Nomina Movil</h3><a name="FRQ-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0001</th>
+<th align="left" valign="top" width="100%">
+Crear un perfil</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+Permitir crear un perfil de acuerdo a lo que requiera el usuario, pues puede ser un usuario empleado o un usuario independiente</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0004</th>
+<th align="left" valign="top" width="100%">
+Actualizar Perfil</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+Permitir que el usuario cuando cambie de perfil, es decir, si el empleado pasa a ser independiente o viceverza el sistema permita modificar los valores de inicio para obtener los calculos reales que parten de estos valores iniciales.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0006" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0006</th>
+<th align="left" valign="top" width="100%">
+Generar <a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">Informe</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+Permitir generar un <a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">informe</a> con los datos mas relevantes de la nomina</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">quedaría bien</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0003</th>
+<th align="left" valign="top" width="100%">
+Calcular nomina</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+Permitir que atraves de unos valores iniciales ingresados, el sistema pueda calcular el dinero que el usuario recibira como nomina y asi este pueda organizarse en sus gastos con antelacion.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de verificación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0010" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0010</th>
+<th align="left" valign="top" width="100%">
+Registrar Gastos Personales</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+Permitir ingresar unos valores que corresponden al total de gastos del usuario para  que posteriormente la aplicacion realice las operaciones necesarias y asi mostrar un valorm</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="FRQ-0007" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">FRQ-0007</th>
+<th align="left" valign="top" width="100%">
+Registrar Sueldo Basico</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+Permitir ingresar al usuario el sueldo basico como unos de los parametros de configuracion del perfil del usuario.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0019" />
+<h2 align="left">4.2 
+De Informacion</h2><a name="IRQ-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">IRQ-0001</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Datos de Cliente</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá almacenar la información correspondiente a 
+<em>
+Usuario.
+				</em>
+    En concreto:
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Datos específicos</th>
+<td colspan="2" align="left" valign="top">
+<ul>
+<li>
+<a name="DAT-0001" />
+Nombre</li>
+<li>
+<a name="DAT-0002" />
+Apellido</li>
+<li>
+<a name="DAT-0003" />
+Codigo</li>
+<li>
+<a name="DAT-0004" />
+Cedula</li>
+<li>
+<a name="DAT-0005" />
+Cargo
+								(<em>
+(Gerente, auxiliar, director, operador, ect)</em>)
+							</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>1 
+                        año(s)</td>
+<td>2 
+                        año(s)</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Ocurrencias simultáneas</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="IRQ-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">IRQ-0002</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Datos de la Nomina</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá almacenar la información correspondiente a 
+<em>
+Nomina
+<br />
+<br />
+<br />
+<br />.
+				</em>
+    En concreto:
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Datos específicos</th>
+<td colspan="2" align="left" valign="top">
+<ul>
+<li>
+<a name="DAT-0006" />
+Nombre Empresa</li>
+<li>
+<a name="DAT-0007" />
+Còdigo</li>
+<li>
+<a name="DAT-0008" />
+Fecha
+								(<em>
+dd/mm/aa</em>)
+							</li>
+<li>
+<a name="DAT-0009" />
+Valor Nomina</li>
+<li>
+<a name="DAT-0010" />
+Deducciones
+								(<em>
+(Legales, Prestamos, otros cobros)</em>)
+							</li>
+<li>
+<a name="DAT-0012" />
+Descansos</li>
+<li>
+<a name="DAT-0013" />
+Auxilio de transporte
+<br />
+</li>
+<li>
+<a name="DAT-0014" />
+Horas laboradas
+								(<em>
+(extras diurnas, extras nocturnas, festivas diurnas, festivas nocturnas, dominicales diurnas, dominicales nocturnas)
+<br />
+</em>)
+							</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>1 
+                        año(s)</td>
+<td>2 
+                        año(s)</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Ocurrencias simultáneas</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0020" />
+<h2 align="left">4.3 
+No Funcionales</h2><a name="SEC-0016" />
+<h1 align="left">5 
+Casos de Uso</h1><a name="SEC-0022" />
+<h2 align="left">5.1 
+Actores</h2><a name="ACT-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0001</th>
+<th align="left" valign="top" width="100%">
+Usuario</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>La persona que realiza la consulta de su nomina en el dispositivo movil.
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ACT-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0002</th>
+<th align="left" valign="top" width="100%">
+Empleador</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>?</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>?</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>La persona que utilizara la aplicacion para realizar la nomina de sus empleadores en caso de una caida del sistema..</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0023" />
+<h2 align="left">5.2 
+Casos de Uso</h2><a name="UC-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0001</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Inicio del sistema y Creacion del perfil</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+el usuario es nuevo</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="8">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0021" />
+<td align="center" valign="top">1</td>
+<td>El
+     
+    sistema<em>
+Consulta si hay algun perfil creado</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0022" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+el sistema encuentra que no hay perfil creado,
+                                </em>el
+     
+    sistema<em>
+presenta la forma de creación del perfil</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0016" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+ingresa sus datos personales.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0017" />
+<td align="center" valign="top">4</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+solicita al sistema guardar la información.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0023" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+valida que toda la información esté completa</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0020" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+guarda la información y muestra un mensaje al usuario que la operación ha sido exitosa.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0025" />
+<td align="center" valign="top">7</td>
+<td>El
+     
+    sistema<em>
+direcciona al usuario al menú despues de haber guardado su informacion.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+Se devuelve al menu principal</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="4">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0004" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+se encuentra  un perfil creado,
+                            </em>el
+     
+    sistema<em>
+arrojará un mensaje diciendo " El Perfil ya esta creado", e ira al menú.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0005" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+el usuario no solicita guardar la informacion ingresada,
+                            </em>el
+     
+    sistema<em>
+arrojará un mensaje diciendo "desea guardar la informacion".</em>,
+                            a continuación este caso de uso
+                             
+                            <em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0003" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+la información está incompleta,
+                            </em>el
+     
+    sistema<em>
+presenta un mensaje indicando que debe completar la información.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>continúa</em>
+                                (<em>
+retornando al paso 3</em>)
+                            </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0002</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Menú</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+Cuando el usuario solicita al sistema mostrar la ventana de ingreso de datos o inmediatamente despues de crear el perfil.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+Debe de haber un perfil creado</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0027" />
+<td align="center" valign="top">1</td>
+<td>El
+     
+    sistema<em>
+mostrará el menú
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0032" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+selecciona editar el perfíl</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0029" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+selecciona ingresar datos</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0030" />
+<td align="center" valign="top">4</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+selecciona generar <a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">informe</a>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0031" />
+<td align="center" valign="top">5</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+selecciona salir del sistema</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+Esperando a la selección de una opción</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0003</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Editar Perfil</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 28/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Luis Arango</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+William Cifuentes</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0003">
+Usuario</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+el usuario selecciona de las opciones del meú editar perfil</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="6">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0033" />
+<td align="center" valign="top">1</td>
+<td>El
+     
+    sistema<em>
+Mostrará la ventana, editar perfil</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0034" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+consulta y trae la informacion actual del perfil</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0035" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+editará su informacion </em>
+</td>
+</tr>
+<tr>
+<a name="STP-0036" />
+<td align="center" valign="top">4</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+solicita al sistema guardar la informacion editada</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0037" />
+<td align="center" valign="top">5</td>
+<td>El
+     
+    sistema<em>
+guarda la informacion y regresa al menú principal
+<br />
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+se devuelve al menú principal
+<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0006" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+el usuario cancela la edicion del perfil,
+                            </em>el
+     
+    sistema<em>
+mostrará  un mensaje " No se guardará la información" y regresará al menú</em>,
+                            a continuación este caso de uso
+                             
+                            <em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0004</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Ingresa los valores de nómina del Empleado</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 28/10/2012 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>?</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>?</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+Que el usuario seleccione la opción ingresar datos en el menú</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="4">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0040" />
+<td align="center" valign="top">1</td>
+<td>El
+     
+    sistema<em>
+Mostrará la ventana igresar datos del empleado</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0041" />
+<td align="center" valign="top">2</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+ingresa los valores de la nómina</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0042" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+solicita al sistema guardar la informción ingresada</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+El sistema regresá al menú</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0008" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+cancela el ingreso de los valores de nómina,
+                            </em>el actor<a href="#ACT-0001" title="Este actor representa La persona que realiza la consulta de su nomina en el dispositivo movil.">
+Usuario (ACT-0001)
+    </a>
+<em>
+no guardará los datos y regresará al menú</em>,
+                            a continuación este caso de uso
+                             
+                            <em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0010" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+el usuario no solicita guardar ,
+                            </em>el
+     
+    sistema<em>
+arrojará un mensaje "Desea salvar la informacion"</em>,
+                            a continuación este caso de uso
+                             
+                            <em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0011" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+No desea guardar la información,
+                            </em>el
+     
+    sistema<em>
+regresará al menú</em>,
+                            a continuación este caso de uso
+                             
+                            <em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0012" />
+<td align="center" valign="top">3</td>
+<td>Si<em>
+Desea guardar la información,
+                            </em>el
+     
+    sistema<em>
+guardará la información y regresará al menú</em>,
+                            a continuación este caso de uso
+                             
+                            <em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0017" />
+<h1 align="left">6 
+ Glosario</h1><a name="GLO-0004" />
+<p align="left">
+<b> informe:</b>
+<a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">INFORME</a>: llamaremos <a href="#GLO-0004" title="INFORME: llamaremos informe al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.">informe</a> al resumen puntual de la nomina del usuarios con los datos mas relevates de este que el sistema arrojara.</p>
 </body>
 </html>
