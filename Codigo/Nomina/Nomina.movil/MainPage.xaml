@@ -1,0 +1,49 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Nomina.movil.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="NÓMINA" Style="{StaticResource PhoneTextNormalStyle}" TextAlignment="Center" />
+            <TextBlock x:Name="PageTitle" Text="Menú Principal" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel. Colocar aquí el contenido adicional-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Background="#FFF0F0F0">
+            <HyperlinkButton Content="Ingresar Valores de Hora" Margin="0,47,29,0" Name="hyperlinkButton1" NavigateUri="/IngresarHoras.xaml" FlowDirection="LeftToRight" Foreground="#FF0DAAFA" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Background="#001520C4" FontSize="28" HorizontalAlignment="Right" Width="389" VerticalAlignment="Top" FontFamily="Batang" FontWeight="Bold" FontStyle="Italic" Height="40" />
+            <Button Content="Ir" Height="90" HorizontalAlignment="Left" Margin="110,109,0,0" Name="button1" VerticalAlignment="Top" Width="247" Foreground="#FF0DAAFA" BorderBrush="#FF0DAAFA" FontSize="48" Click="button1_Click" />
+            <Image Height="311" HorizontalAlignment="Left" Margin="64,249,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="334" Source="/Nomina.movil;component/Images/simbolo.jpg" />
+        </Grid>
+    </Grid>
+ 
+    <!--Código de ejemplo que muestra el uso de ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Botón 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Botón 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Elemento de menú 1"/>
+                <shell:ApplicationBarMenuItem Text="Elemento de menú 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
