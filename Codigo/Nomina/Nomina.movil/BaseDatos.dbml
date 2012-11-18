@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="BaseDatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="Persona">
+    <Type Name="Persona">
+      <Column Name="Cedula" Type="System.String" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" CanBeNull="false" />
+      <Column Name="Salario" Type="System.Int32" CanBeNull="false" />
+      <Column Name="VlrDia" Type="System.Int32" CanBeNull="false" />
+      <Column Name="VlrHora" Type="System.Int32" CanBeNull="false" />
+      <Column Name="IdTipoTrabajador" Type="System.String" CanBeNull="false" />
+      <Association Name="Persona_TotalEmpleado" Member="TotalEmpleado" ThisKey="Cedula" OtherKey="Cedula" Type="TotalEmpleado" />
+    </Type>
+  </Table>
+  <Table Name="" Member="TotalEmpleado">
+    <Type Name="TotalEmpleado">
+      <Column Member="Vlrempleado" Type="System.String" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Member="TipodeHora" Type="System.String" CanBeNull="false" />
+      <Column Member="Total" Type="System.Int32" CanBeNull="false" />
+      <Column Member="Cantidad" Type="System.Int32" CanBeNull="false" />
+      <Column Member="Cedula" Type="System.String" CanBeNull="false" />
+      <Association Name="Persona_TotalEmpleado" Member="Persona" ThisKey="Cedula" OtherKey="Cedula" Type="Persona" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

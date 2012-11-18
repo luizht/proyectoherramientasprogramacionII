@@ -1,0 +1,104 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Nomina.movil.PanoramaPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False"
+    xmlns:local="clr-namespace:Nomina.movil">
+    
+
+    <!--LayoutRoot contiene la cuadrícula raíz donde se coloca el resto del contenido de la página-->
+    <Grid local:TiltEffect.IsTiltEnabled="True" x:Name="LayoutRoot">
+        <controls:Panorama HorizontalAlignment="Stretch">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/Nomina.movil;component/Images/Fondo1.png" />
+            </controls:Panorama.Background>
+            <!--Elemento Panorama uno-->
+            <controls:PanoramaItem Foreground="#FF483E37">
+                <Grid MaxWidth="Infinity">
+                    <TextBlock Height="60" Margin="0,190,0,0" Name="textBlock1" Text="Empleado" VerticalAlignment="Top" Foreground="#FF47210E" TextAlignment="Center" HorizontalAlignment="Right" Width="415" FontSize="40" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" />
+                    <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="34,300,0,0" Name="TxtFecha" Text="" VerticalAlignment="Top" Width="383" />
+                    <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="46,283,0,0" Name="LblFecha" Text="Fecha" VerticalAlignment="Top" Visibility="Visible" />
+                    <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="32,393,0,0" Name="TxtDeducciones" Text="" VerticalAlignment="Top" Width="386" />
+                    <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="43,371,0,0" Name="LblDeducciones" Text="Deducciones" VerticalAlignment="Top" />
+                    <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="45,466,0,0" Name="LblTipoHora" Text="Salario" VerticalAlignment="Top" />
+                    <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="42,606,0,0" Name="TxtHoras" Text="" VerticalAlignment="Top" Width="207" IsHitTestVisible="True">
+                        <TextBox.InputScope>
+                            <InputScope>
+                                <InputScopeName NameValue="Number"></InputScopeName>
+                            </InputScope>
+                        </TextBox.InputScope>
+                    </TextBox>
+                    <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="52,0,0,159" Name="LblCantidad" Text="Cantidad de  Horas" VerticalAlignment="Bottom" />
+                    <ListBox Height="89" HorizontalAlignment="Left" Margin="51,499,0,0" Name="LbxTipoHora" VerticalAlignment="Top" Width="417" DataContext="{Binding}" DisplayMemberPath="" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic">
+                        <ListBoxItem Content="Hora Extra Diurna" Foreground="#FF47210E" />
+                        <ListBoxItem Content="Hora Extra Nocturna" Foreground="#FF47210E" />
+                        <ListBoxItem Content="Dominical" Foreground="#FF47210E" />
+                    </ListBox>
+                    <Button Height="93" HorizontalAlignment="Left" Margin="108,674,0,0" Name="BtnGuardarV" VerticalAlignment="Top" Width="93" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="BtnGuardarV_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Nomina.movil;component/Images/Guardar.png" />
+                        </Button.Background>
+                    </Button>
+                    <Button Height="93" HorizontalAlignment="Left" Margin="236,672,0,0" Name="BtnCancelarV" VerticalAlignment="Top" Width="93" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BtnCancelarV_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Nomina.movil;component/Images/Cancelar.png" />
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Elemento Panorama dos-->
+            <controls:PanoramaItem Foreground="#FF483E37" FontSize="18">
+                <Grid>
+                    <TextBlock FontFamily="Comic Sans MS" FontSize="40" FontStyle="Italic" FontWeight="Bold" Foreground="#FF47210E" Height="60" HorizontalAlignment="Right" Margin="0,194,-2,0" Name="textBlock2" Text="Independiente" TextAlignment="Center" VerticalAlignment="Top" Width="415" />
+                    <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="35,300,0,0" Name="TxtFechaI" Text="" VerticalAlignment="Top" Width="383">
+                        <TextBox.InputScope>
+                            <InputScope>
+                                <InputScopeName NameValue="Default"></InputScopeName>
+                            </InputScope>
+                        </TextBox.InputScope>
+                    </TextBox>
+                    <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="47,283,0,0" Name="LblFechaI" Text="Fecha" VerticalAlignment="Top" Visibility="Visible" />
+                    <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="33,393,0,0" Name="textBox2" Text="" VerticalAlignment="Top" Width="386" />
+                    <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="44,371,0,0" Name="LblEmpresa" Text="Empresa" VerticalAlignment="Top" />
+                    <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="46,466,0,0" Name="LblTipo" Text="Tipo de Labor" VerticalAlignment="Top" />
+                    <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" IsHitTestVisible="True" Margin="44,602,0,0" Name="TxtCantidadI" Text="" VerticalAlignment="Top" Width="207">
+                        <TextBox.InputScope>
+                            <InputScope>
+                                <InputScopeName NameValue="Number"></InputScopeName>
+                            </InputScope>
+                        </TextBox.InputScope>
+                    </TextBox>
+                    <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="54,0,0,163" Name="LblCantidadI" Text="Cantidad" VerticalAlignment="Bottom" />
+                    <ListBox DataContext="{Binding}" DisplayMemberPath="" FontFamily="Comic Sans MS" FontStyle="Italic" FontWeight="Bold" Height="89" HorizontalAlignment="Left" Margin="52,499,0,0" Name="LbxTipoI" VerticalAlignment="Top" Width="417">
+                        <ListBoxItem Content="Dias Trabajados" Foreground="#FF47210E" />
+                        <ListBoxItem Content="Horas Trabajadas" Foreground="#FF47210E" />
+                    </ListBox>
+                    <Button BorderBrush="{x:Null}" Foreground="{x:Null}" Height="93" HorizontalAlignment="Left" Margin="109,674,0,0" Name="BtnGuardarI" VerticalAlignment="Top" Width="93" Click="BtnGuardarI_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Nomina.movil;component/Images/Guardar.png" />
+                        </Button.Background>
+                    </Button>
+                    <Button BorderBrush="{x:Null}" Foreground="{x:Null}" Height="93" HorizontalAlignment="Left" Margin="237,672,0,0" Name="BtnCancelarI" VerticalAlignment="Top" Width="93" Click="BtnCancelarI_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Nomina.movil;component/Images/Cancelar.png" />
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+    <!--Las aplicaciones basadas en Panorama no deben mostrar un elemento ApplicationBar-->
+
+</phone:PhoneApplicationPage>

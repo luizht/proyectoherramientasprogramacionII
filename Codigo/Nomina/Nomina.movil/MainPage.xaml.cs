@@ -21,9 +21,26 @@ namespace Nomina.movil
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void BtnAdministrar_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/IngresarHoras.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/AdministrarPerfil.xaml", UriKind.Relative));
         }
+
+        private void BtnValores_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/IngresarValores.xaml", UriKind.Relative));
+        }
+
+        private void BtnInformes_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/GenerarInforme.xaml", UriKind.Relative));
+        }
+
+        private void BtnAcercade_Click(object sender, System.EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AcercaDe.xaml", UriKind.Relative));
+        }
+
+
     }
 }

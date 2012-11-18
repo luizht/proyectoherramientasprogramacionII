@@ -13,9 +13,9 @@ using Microsoft.Phone.Controls;
 
 namespace Nomina.movil
 {
-    public partial class Page1 : PhoneApplicationPage
+    public partial class Page2 : PhoneApplicationPage
     {
-        public Page1()
+        public Page2()
         {
             InitializeComponent();
         }

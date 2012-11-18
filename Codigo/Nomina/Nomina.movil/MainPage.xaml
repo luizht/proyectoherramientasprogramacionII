@@ -6,44 +6,52 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="False"
+    xmlns:local="clr-namespace:Nomina.movil">
 
     <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid local:TiltEffect.IsTiltEnabled="True" x:Name="LayoutRoot">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="133"/>
+            <RowDefinition Height="667*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="NÓMINA" Style="{StaticResource PhoneTextNormalStyle}" TextAlignment="Center" />
-            <TextBlock x:Name="PageTitle" Text="Menú Principal" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel x:Name="TitlePanel" Margin="12,17,0,0">
+            <TextBlock x:Name="ApplicationTitle" Text="NÓMINA" Style="{StaticResource PhoneTextNormalStyle}" TextAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#FF47210E" />
+            <TextBlock x:Name="PageTitle" Text="Menú Principal" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#FF47210E" FontWeight="Bold" FontStyle="Italic" FontSize="56" TextAlignment="Center" FontStretch="SemiCondensed" TextWrapping="NoWrap" FontFamily="Comic Sans MS" />
         </StackPanel>
-
+        <Button Grid.Row="1" Height="126" HorizontalAlignment="Left" Margin="51,65,0,0" Name="BtnValores" VerticalAlignment="Top" Width="126" BorderBrush="{x:Null}" Foreground="{x:Null}" Content="BtnValores" Click="BtnValores_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Nomina.movil;component/Images/Valores.png" />
+            </Button.Background>
+        </Button>
+        <Button Content="BtnAdministrar" Height="148" HorizontalAlignment="Left" Margin="208,101,0,0" Name="BtnAdministrar" VerticalAlignment="Top" Width="176" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.RowSpan="2" ClickMode="Release" Click="BtnAdministrar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Nomina.movil;component/Images/Administrar.png" />
+            </Button.Background>
+        </Button>
+        <Button Content="BtnInformes" Height="126" HorizontalAlignment="Left" Margin="173,197,0,0" Name="BtnInformes" VerticalAlignment="Top" Width="126" Grid.Row="1" BorderBrush="{x:Null}" Foreground="{x:Null}" DataContext="{Binding}" Click="BtnInformes_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Nomina.movil;component/Images/Informe.png" />
+            </Button.Background>
+        </Button>
         <!--ContentPanel. Colocar aquí el contenido adicional-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Background="#FFF0F0F0">
-            <HyperlinkButton Content="Ingresar Valores de Hora" Margin="0,47,29,0" Name="hyperlinkButton1" NavigateUri="/IngresarHoras.xaml" FlowDirection="LeftToRight" Foreground="#FF0DAAFA" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Background="#001520C4" FontSize="28" HorizontalAlignment="Right" Width="389" VerticalAlignment="Top" FontFamily="Batang" FontWeight="Bold" FontStyle="Italic" Height="40" />
-            <Button Content="Ir" Height="90" HorizontalAlignment="Left" Margin="110,109,0,0" Name="button1" VerticalAlignment="Top" Width="247" Foreground="#FF0DAAFA" BorderBrush="#FF0DAAFA" FontSize="48" Click="button1_Click" />
-            <Image Height="311" HorizontalAlignment="Left" Margin="64,249,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="334" Source="/Nomina.movil;component/Images/simbolo.jpg" />
-        </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Nomina.movil;component/Images/Acercade.png" />
+        </Grid.Background>
     </Grid>
  
     <!--Código de ejemplo que muestra el uso de ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+ 	<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Botón 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Botón 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="Elemento de menú 1"/>
-                <shell:ApplicationBarMenuItem Text="Elemento de menú 2"/>
-            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton x:Name="BtnAcercade" IconUri="/icons/WILI-06.png" Text="Acerca de" IsEnabled="True" Click="BtnAcercade_Click"/>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
