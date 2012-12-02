@@ -2,23 +2,42 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BaseDatos">
   <DataContextMoniker Name="/BaseDatosDataContext" />
   <nestedChildShapes>
-    <classShape Id="0330bd15-fd25-4c84-a172-34b4ab5dc20d" absoluteBounds="0.5, 1, 2, 1.9631982421875">
+    <classShape Id="0330bd15-fd25-4c84-a172-34b4ab5dc20d" absoluteBounds="2.875, 1, 2, 1.9631982421875">
       <DataClassMoniker Name="/BaseDatosDataContext/Persona" />
       <nestedChildShapes>
-        <elementListCompartment Id="76479629-ad4b-4563-b1f4-9a524ff4a2e0" absoluteBounds="0.515, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="76479629-ad4b-4563-b1f4-9a524ff4a2e0" absoluteBounds="2.89, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="ee7f67de-a012-4064-a4a1-2abb1717faef" absoluteBounds="3.625, 1, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/BaseDatosDataContext/TotalEmpleado" />
+    <classShape Id="6019ea9f-87e0-4640-86e2-2df03ad67161" absoluteBounds="8.125, 1, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/BaseDatosDataContext/TipoTrabajador" />
       <nestedChildShapes>
-        <elementListCompartment Id="87e0f5be-fa86-45f9-8a08-b1bed64ce484" absoluteBounds="3.64, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ac03e7f2-0fde-4e3c-895b-3437ab5e49cd" absoluteBounds="8.14, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 1.88544840494792); (3.625 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/BaseDatosDataContext/Persona/Persona_TotalEmpleado" />
+    <classShape Id="4571d425-1239-446d-99c7-8869aea7b09a" absoluteBounds="2.875, 4.125, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/BaseDatosDataContext/Ingresos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7695f981-2ef7-4848-acd7-4443640d62d7" absoluteBounds="2.8899999999999997, 4.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a5f552f1-1d98-4a68-9cf0-df1af46eb35a" absoluteBounds="8.5, 4.375, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/BaseDatosDataContext/TipoHora" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb7ffe24-b9b4-45cc-8348-88095d1b33e6" absoluteBounds="8.515, 4.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 4.97199625651042); (4.875 : 4.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BaseDatosDataContext/TipoHora/TipoHora_Ingresos" />
       <nodes>
+        <classShapeMoniker Id="a5f552f1-1d98-4a68-9cf0-df1af46eb35a" />
+        <classShapeMoniker Id="4571d425-1239-446d-99c7-8869aea7b09a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.125 : 1.59699625651042); (4.875 : 1.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BaseDatosDataContext/TipoTrabajador/TipoTrabajador_Persona" />
+      <nodes>
+        <classShapeMoniker Id="6019ea9f-87e0-4640-86e2-2df03ad67161" />
         <classShapeMoniker Id="0330bd15-fd25-4c84-a172-34b4ab5dc20d" />
-        <classShapeMoniker Id="ee7f67de-a012-4064-a4a1-2abb1717faef" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

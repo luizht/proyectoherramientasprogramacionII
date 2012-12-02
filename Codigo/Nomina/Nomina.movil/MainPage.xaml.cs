@@ -19,6 +19,33 @@ namespace Nomina.movil
         public MainPage()
         {
             InitializeComponent();
+            this.Loaded += new RoutedEventHandler(MainPage_Loaded);
+        
+        }
+
+        void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            //1. El sistema valida que existe un perfil
+            using (BaseDatosDataContext contexto
+                = new BaseDatosDataContext(App.cadenaConexion))
+            {
+                //Select * from Perfil
+                var consulta = (from p in contexto.TipoTrabajador
+                                select p).ToList();
+              
+
+                if (consulta.Count == 0)
+                {
+
+                  
+                    NavigationService.Navigate(
+                        new Uri("/AdministrarPerfil.xaml",
+                            UriKind.Relative));
+
+
+                }
+
+            }
         }
 
         private void BtnAdministrar_Click(object sender, RoutedEventArgs e)
@@ -28,7 +55,16 @@ namespace Nomina.movil
 
         private void BtnValores_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/IngresarValores.xaml", UriKind.Relative));
+         
+
+
+
+
+                NavigationService.Navigate(new Uri("/Independiente.xaml", UriKind.Relative));
+       
+            
+
+            
         }
 
         private void BtnInformes_Click(object sender, RoutedEventArgs e)

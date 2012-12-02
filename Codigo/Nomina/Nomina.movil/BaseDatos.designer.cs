@@ -32,9 +32,15 @@ namespace Nomina.movil
     partial void InsertPersona(Persona instance);
     partial void UpdatePersona(Persona instance);
     partial void DeletePersona(Persona instance);
-    partial void InsertTotalEmpleado(TotalEmpleado instance);
-    partial void UpdateTotalEmpleado(TotalEmpleado instance);
-    partial void DeleteTotalEmpleado(TotalEmpleado instance);
+    partial void InsertTipoTrabajador(TipoTrabajador instance);
+    partial void UpdateTipoTrabajador(TipoTrabajador instance);
+    partial void DeleteTipoTrabajador(TipoTrabajador instance);
+    partial void InsertIngresos(Ingresos instance);
+    partial void UpdateIngresos(Ingresos instance);
+    partial void DeleteIngresos(Ingresos instance);
+    partial void InsertTipoHora(TipoHora instance);
+    partial void UpdateTipoHora(TipoHora instance);
+    partial void DeleteTipoHora(TipoHora instance);
     #endregion
 		
 		public BaseDatosDataContext(string connection) : 
@@ -43,11 +49,15 @@ namespace Nomina.movil
 			OnCreated();
 		}
 		
+
+		
 		public BaseDatosDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
+		
+
 		
 		public System.Data.Linq.Table<Persona> Persona
 		{
@@ -57,11 +67,27 @@ namespace Nomina.movil
 			}
 		}
 		
-		public System.Data.Linq.Table<TotalEmpleado> TotalEmpleado
+		public System.Data.Linq.Table<TipoTrabajador> TipoTrabajador
 		{
 			get
 			{
-				return this.GetTable<TotalEmpleado>();
+				return this.GetTable<TipoTrabajador>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Ingresos> Ingresos
+		{
+			get
+			{
+				return this.GetTable<Ingresos>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TipoHora> TipoHora
+		{
+			get
+			{
+				return this.GetTable<TipoHora>();
 			}
 		}
 	}
@@ -84,7 +110,7 @@ namespace Nomina.movil
 		
 		private string _IdTipoTrabajador;
 		
-		private EntitySet<TotalEmpleado> _TotalEmpleado;
+		private EntityRef<TipoTrabajador> _TipoTrabajador;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -106,7 +132,7 @@ namespace Nomina.movil
 		
 		public Persona()
 		{
-			this._TotalEmpleado = new EntitySet<TotalEmpleado>(new Action<TotalEmpleado>(this.attach_TotalEmpleado), new Action<TotalEmpleado>(this.detach_TotalEmpleado));
+			this._TipoTrabajador = default(EntityRef<TipoTrabajador>);
 			OnCreated();
 		}
 		
@@ -221,6 +247,10 @@ namespace Nomina.movil
 			{
 				if ((this._IdTipoTrabajador != value))
 				{
+					if (this._TipoTrabajador.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnIdTipoTrabajadorChanging(value);
 					this.SendPropertyChanging();
 					this._IdTipoTrabajador = value;
@@ -230,16 +260,139 @@ namespace Nomina.movil
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Persona_TotalEmpleado", Storage="_TotalEmpleado", ThisKey="Cedula", OtherKey="Cedula")]
-		public EntitySet<TotalEmpleado> TotalEmpleado
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TipoTrabajador_Persona", Storage="_TipoTrabajador", ThisKey="IdTipoTrabajador", OtherKey="ID", IsForeignKey=true)]
+		public TipoTrabajador TipoTrabajador
 		{
 			get
 			{
-				return this._TotalEmpleado;
+				return this._TipoTrabajador.Entity;
 			}
 			set
 			{
-				this._TotalEmpleado.Assign(value);
+				TipoTrabajador previousValue = this._TipoTrabajador.Entity;
+				if (((previousValue != value) 
+							|| (this._TipoTrabajador.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TipoTrabajador.Entity = null;
+						previousValue.Persona.Remove(this);
+					}
+					this._TipoTrabajador.Entity = value;
+					if ((value != null))
+					{
+						value.Persona.Add(this);
+						this._IdTipoTrabajador = value.ID;
+					}
+					else
+					{
+						this._IdTipoTrabajador = default(string);
+					}
+					this.SendPropertyChanged("TipoTrabajador");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
+	public partial class TipoTrabajador : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID;
+		
+		private string _Descripcion;
+		
+		private EntitySet<Persona> _Persona;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(string value);
+    partial void OnIDChanged();
+    partial void OnDescripcionChanging(string value);
+    partial void OnDescripcionChanged();
+    #endregion
+		
+		public TipoTrabajador()
+		{
+			this._Persona = new EntitySet<Persona>(new Action<Persona>(this.attach_Persona), new Action<Persona>(this.detach_Persona));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", CanBeNull=false, IsPrimaryKey=true)]
+		public string ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", CanBeNull=false)]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this.OnDescripcionChanging(value);
+					this.SendPropertyChanging();
+					this._Descripcion = value;
+					this.SendPropertyChanged("Descripcion");
+					this.OnDescripcionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TipoTrabajador_Persona", Storage="_Persona", ThisKey="ID", OtherKey="IdTipoTrabajador")]
+		public EntitySet<Persona> Persona
+		{
+			get
+			{
+				return this._Persona;
+			}
+			set
+			{
+				this._Persona.Assign(value);
 			}
 		}
 		
@@ -263,121 +416,149 @@ namespace Nomina.movil
 			}
 		}
 		
-		private void attach_TotalEmpleado(TotalEmpleado entity)
+		private void attach_Persona(Persona entity)
 		{
 			this.SendPropertyChanging();
-			entity.Persona = this;
+			entity.TipoTrabajador = this;
 		}
 		
-		private void detach_TotalEmpleado(TotalEmpleado entity)
+		private void detach_Persona(Persona entity)
 		{
 			this.SendPropertyChanging();
-			entity.Persona = null;
+			entity.TipoTrabajador = null;
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
-	public partial class TotalEmpleado : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Ingresos : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _Vlrempleado;
+		private int _Identificador;
 		
-		private string _TipodeHora;
+		private System.DateTime _Fecha;
 		
-		private int _Total;
+		private System.Nullable<long> _Deducciones;
 		
-		private int _Cantidad;
+		private string _TipoLabor;
 		
-		private string _Cedula;
+		private long _Cantidad;
 		
-		private EntityRef<Persona> _Persona;
+		private string _Empresa;
+		
+		private EntityRef<TipoHora> _TipoHora;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnVlrempleadoChanging(string value);
-    partial void OnVlrempleadoChanged();
-    partial void OnTipodeHoraChanging(string value);
-    partial void OnTipodeHoraChanged();
-    partial void OnTotalChanging(int value);
-    partial void OnTotalChanged();
-    partial void OnCantidadChanging(int value);
+    partial void OnIdentificadorChanging(int value);
+    partial void OnIdentificadorChanged();
+    partial void OnFechaChanging(System.DateTime value);
+    partial void OnFechaChanged();
+    partial void OnDeduccionesChanging(System.Nullable<long> value);
+    partial void OnDeduccionesChanged();
+    partial void OnTipoLaborChanging(string value);
+    partial void OnTipoLaborChanged();
+    partial void OnCantidadChanging(long value);
     partial void OnCantidadChanged();
-    partial void OnCedulaChanging(string value);
-    partial void OnCedulaChanged();
+    partial void OnEmpresaChanging(string value);
+    partial void OnEmpresaChanged();
     #endregion
 		
-		public TotalEmpleado()
+		public Ingresos()
 		{
-			this._Persona = default(EntityRef<Persona>);
+			this._TipoHora = default(EntityRef<TipoHora>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vlrempleado", CanBeNull=false, IsPrimaryKey=true)]
-		public string Vlrempleado
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Identificador", AutoSync=AutoSync.OnInsert, IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Identificador
 		{
 			get
 			{
-				return this._Vlrempleado;
+				return this._Identificador;
 			}
 			set
 			{
-				if ((this._Vlrempleado != value))
+				if ((this._Identificador != value))
 				{
-					this.OnVlrempleadoChanging(value);
+					this.OnIdentificadorChanging(value);
 					this.SendPropertyChanging();
-					this._Vlrempleado = value;
-					this.SendPropertyChanged("Vlrempleado");
-					this.OnVlrempleadoChanged();
+					this._Identificador = value;
+					this.SendPropertyChanged("Identificador");
+					this.OnIdentificadorChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TipodeHora", CanBeNull=false)]
-		public string TipodeHora
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha")]
+		public System.DateTime Fecha
 		{
 			get
 			{
-				return this._TipodeHora;
+				return this._Fecha;
 			}
 			set
 			{
-				if ((this._TipodeHora != value))
+				if ((this._Fecha != value))
 				{
-					this.OnTipodeHoraChanging(value);
+					this.OnFechaChanging(value);
 					this.SendPropertyChanging();
-					this._TipodeHora = value;
-					this.SendPropertyChanged("TipodeHora");
-					this.OnTipodeHoraChanged();
+					this._Fecha = value;
+					this.SendPropertyChanged("Fecha");
+					this.OnFechaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total")]
-		public int Total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deducciones")]
+		public System.Nullable<long> Deducciones
 		{
 			get
 			{
-				return this._Total;
+				return this._Deducciones;
 			}
 			set
 			{
-				if ((this._Total != value))
+				if ((this._Deducciones != value))
 				{
-					this.OnTotalChanging(value);
+					this.OnDeduccionesChanging(value);
 					this.SendPropertyChanging();
-					this._Total = value;
-					this.SendPropertyChanged("Total");
-					this.OnTotalChanged();
+					this._Deducciones = value;
+					this.SendPropertyChanged("Deducciones");
+					this.OnDeduccionesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TipoLabor", CanBeNull=false)]
+		public string TipoLabor
+		{
+			get
+			{
+				return this._TipoLabor;
+			}
+			set
+			{
+				if ((this._TipoLabor != value))
+				{
+					if (this._TipoHora.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnTipoLaborChanging(value);
+					this.SendPropertyChanging();
+					this._TipoLabor = value;
+					this.SendPropertyChanged("TipoLabor");
+					this.OnTipoLaborChanged();
 				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cantidad")]
-		public int Cantidad
+		public long Cantidad
 		{
 			get
 			{
@@ -396,60 +577,56 @@ namespace Nomina.movil
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cedula", CanBeNull=false)]
-		public string Cedula
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Empresa")]
+		public string Empresa
 		{
 			get
 			{
-				return this._Cedula;
+				return this._Empresa;
 			}
 			set
 			{
-				if ((this._Cedula != value))
+				if ((this._Empresa != value))
 				{
-					if (this._Persona.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnCedulaChanging(value);
+					this.OnEmpresaChanging(value);
 					this.SendPropertyChanging();
-					this._Cedula = value;
-					this.SendPropertyChanged("Cedula");
-					this.OnCedulaChanged();
+					this._Empresa = value;
+					this.SendPropertyChanged("Empresa");
+					this.OnEmpresaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Persona_TotalEmpleado", Storage="_Persona", ThisKey="Cedula", OtherKey="Cedula", IsForeignKey=true)]
-		public Persona Persona
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TipoHora_Ingresos", Storage="_TipoHora", ThisKey="TipoLabor", OtherKey="Id", IsForeignKey=true)]
+		public TipoHora TipoHora
 		{
 			get
 			{
-				return this._Persona.Entity;
+				return this._TipoHora.Entity;
 			}
 			set
 			{
-				Persona previousValue = this._Persona.Entity;
+				TipoHora previousValue = this._TipoHora.Entity;
 				if (((previousValue != value) 
-							|| (this._Persona.HasLoadedOrAssignedValue == false)))
+							|| (this._TipoHora.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Persona.Entity = null;
-						previousValue.TotalEmpleado.Remove(this);
+						this._TipoHora.Entity = null;
+						previousValue.Ingresos.Remove(this);
 					}
-					this._Persona.Entity = value;
+					this._TipoHora.Entity = value;
 					if ((value != null))
 					{
-						value.TotalEmpleado.Add(this);
-						this._Cedula = value.Cedula;
+						value.Ingresos.Add(this);
+						this._TipoLabor = value.Id;
 					}
 					else
 					{
-						this._Cedula = default(string);
+						this._TipoLabor = default(string);
 					}
-					this.SendPropertyChanged("Persona");
+					this.SendPropertyChanged("TipoHora");
 				}
 			}
 		}
@@ -472,6 +649,120 @@ namespace Nomina.movil
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
+	public partial class TipoHora : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Id;
+		
+		private string _Descripcion;
+		
+		private EntitySet<Ingresos> _Ingresos;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(string value);
+    partial void OnIdChanged();
+    partial void OnDescripcionChanging(string value);
+    partial void OnDescripcionChanged();
+    #endregion
+		
+		public TipoHora()
+		{
+			this._Ingresos = new EntitySet<Ingresos>(new Action<Ingresos>(this.attach_Ingresos), new Action<Ingresos>(this.detach_Ingresos));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", CanBeNull=false, IsPrimaryKey=true)]
+		public string Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", CanBeNull=false)]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this.OnDescripcionChanging(value);
+					this.SendPropertyChanging();
+					this._Descripcion = value;
+					this.SendPropertyChanged("Descripcion");
+					this.OnDescripcionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TipoHora_Ingresos", Storage="_Ingresos", ThisKey="Id", OtherKey="TipoLabor")]
+		public EntitySet<Ingresos> Ingresos
+		{
+			get
+			{
+				return this._Ingresos;
+			}
+			set
+			{
+				this._Ingresos.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Ingresos(Ingresos entity)
+		{
+			this.SendPropertyChanging();
+			entity.TipoHora = this;
+		}
+		
+		private void detach_Ingresos(Ingresos entity)
+		{
+			this.SendPropertyChanging();
+			entity.TipoHora = null;
 		}
 	}
 }

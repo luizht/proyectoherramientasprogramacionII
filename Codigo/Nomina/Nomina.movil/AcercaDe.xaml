@@ -22,28 +22,28 @@
 
         <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock FontFamily="Comic Sans MS" FontSize="28" FontStyle="Italic" FontWeight="Bold" Foreground="#FF47210E" Height="48" Name="textBlock1" Style="{StaticResource PhoneTextNormalStyle}" Text="NÓMINA" TextAlignment="Left" Width="444" />
-            <TextBlock x:Name="PageTitle" Text="Acerca de" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#FF47210E" FontStyle="Italic" FontWeight="Bold" FontFamily="Comic Sans MS" />
+            <TextBlock FontFamily="Segoe WP" FontSize="28" FontStyle="Normal" Foreground="#FF47210E" Height="48" Name="textBlock1" Style="{StaticResource PhoneTextNormalStyle}" Text="NÓMINA" TextAlignment="Left" Width="444" FontWeight="Bold" />
+            <TextBlock x:Name="PageTitle" Text="Acerca de" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#FF47210E" FontStyle="Normal" FontWeight="Normal" FontFamily="Segoe WP" />
         </StackPanel>
 
         <!--ContentPanel. Colocar aquí el contenido adicional-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Background="{x:Null}">
         	<RichTextBox Margin="0" VerticalAlignment="Top" Foreground="#FF47210E">
-        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" FontFamily="Comic Sans MS" Text="Institución:"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS" Text="Institución Universitaria Pascual Bravo"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS"/></Paragraph>
-        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" FontFamily="Comic Sans MS" Text="Materia"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS" Text="Herramientas de Programación III"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS"/></Paragraph>
-        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" FontFamily="Comic Sans MS" Text="Docente:"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS" Text="Sorey García"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS"/></Paragraph>
-        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" FontFamily="Comic Sans MS" Text="Integrantes:"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS" Text="Luis Eduardo Arango"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS" Text="William Cifuentes Rivera"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS"/></Paragraph>
-        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" FontFamily="Comic Sans MS" Text="Agradecimientos:"/></Paragraph>
-        		<Paragraph><Run FontFamily="Comic Sans MS" Text="P"/><Run FontFamily="Comic Sans MS" Text="rimero a Dios y segundo a mi familia"/><Run FontFamily="Comic Sans MS" Text=","/><Run FontFamily="Comic Sans MS" Text=" quienes han sabido comprender y hacer un gran esfuerzo al estar todos los días tan lejos de ellos."/></Paragraph>
+        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" Text="Institución:"/></Paragraph>
+        		<Paragraph><Run Text="Institución Universitaria Pascual Bravo"/></Paragraph>
+        		<Paragraph><Run/></Paragraph>
+        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" Text="Materia"/></Paragraph>
+        		<Paragraph><Run Text="Herramientas de Programación III"/></Paragraph>
+        		<Paragraph><Run/></Paragraph>
+        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" Text="Docente:"/></Paragraph>
+        		<Paragraph><Run Text="Sorey García"/></Paragraph>
+        		<Paragraph><Run/></Paragraph>
+        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" Text="Integrantes:"/></Paragraph>
+        		<Paragraph><Run Text="Luis Eduardo Arango"/></Paragraph>
+        		<Paragraph><Run Text="William Cifuentes Rivera"/></Paragraph>
+        		<Paragraph><Run/></Paragraph>
+        		<Paragraph><Run FontWeight="Bold" FontStyle="Italic" Text="Agradecimientos:"/></Paragraph>
+        		<Paragraph><Run Text="Primero a Dios y segundo a mi familia, quienes han sabido comprender y hacer un gran esfuerzo al estar todos los días tan lejos de ellos."/></Paragraph>
         		<Paragraph><Run/></Paragraph>
         		<Paragraph><Run/></Paragraph>
         		<Paragraph><Run/></Paragraph>

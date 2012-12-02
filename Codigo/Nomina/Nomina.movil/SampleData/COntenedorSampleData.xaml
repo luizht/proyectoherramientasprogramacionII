@@ -1,0 +1,61 @@
+<Nomina_movil:COntenedor xmlns:Nomina_movil="clr-namespace:Nomina.movil">
+	<Nomina_movil:COntenedor.ListaPersonas>
+		<Nomina_movil:Persona Cedula="Maecenas vestibulum aenean nam" IdTipoTrabajador="Praesent adipiscing class parturient aliquam" Nombre="Sed curabitur phasellus" Salario="58" VlrDia="79" VlrHora="33">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Dis mauris" ID="Accumsan cras bibendum est"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Duis nullam integer hac quisque" IdTipoTrabajador="Curae consequat leo" Nombre="Vestibulum dictumst donec vestibulum adipiscing" Salario="94" VlrDia="49" VlrHora="17">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Parturient eleifend vivamus vestibulum" ID="Facilisi aptent"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Faucibus vestibulum adipiscing habitant aliquam" IdTipoTrabajador="Nunc inceptos parturient etiam auctor" Nombre="Convallis amet" Salario="75" VlrDia="65" VlrHora="16">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Vestibulum dignissim ante" ID="Vestibulum elementum congue interdum"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Cursus mus" IdTipoTrabajador="Fusce lobortis adipiscing aliquet" Nombre="Nascetur blandit" Salario="26" VlrDia="40" VlrHora="35">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Nec facilisis" ID="Non commodo dictum"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Per pharetra parturient sed" IdTipoTrabajador="Lorem fermentum" Nombre="Sem fringilla vestibulum lectus" Salario="68" VlrDia="21" VlrHora="50">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Libero conubia arcu" ID="Cubilia morbi diam habitasse sit"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Vestibulum vel" IdTipoTrabajador="Nulla eget proin ligula augue" Nombre="Adipiscing nam parturient dapibus" Salario="48" VlrDia="20" VlrHora="90">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Egestas elit enim" ID="Vestibulum dolor erat fames hendrerit"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Sed euismod vestibulum felis himenaeos" IdTipoTrabajador="Feugiat placerat imperdiet dis pulvinar" Nombre="Est ipsum litora justo" Salario="65" VlrDia="62" VlrHora="12">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Sagittis eros luctus nibh" ID="Malesuada lacus gravida penatibus magnis"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Porttitor nisi lorem magna" IdTipoTrabajador="Nisl massa iaculis" Nombre="Tincidunt metus hac morbi" Salario="96" VlrDia="23" VlrHora="66">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Senectus lacinia leo tristique mattis" ID="Sociosqu suscipit laoreet nunc odio"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Adipiscing torquent mus neque" IdTipoTrabajador="Natoque nec mauris orci" Nombre="Mollis parturient" Salario="29" VlrDia="54" VlrHora="46">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Netus nulla non pede" ID="Quam posuere quis montes potenti"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+		<Nomina_movil:Persona Cedula="Nostra vestibulum ultricies" IdTipoTrabajador="Urna cras ultrices" Nombre="Per sed vehicula volutpat sem" Salario="27" VlrDia="44" VlrHora="47">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Maecenas vestibulum" ID="Pretium duis adipiscing ornare nunc"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+	</Nomina_movil:COntenedor.ListaPersonas>
+	<Nomina_movil:COntenedor.personaSeleccionada>
+		<Nomina_movil:Persona Cedula="Sit praesent porta amet rhoncus" IdTipoTrabajador="Parturient ante" Nombre="Vel purus platea vestibulum sodales" Salario="56" VlrDia="58" VlrHora="46">
+			<Nomina_movil:Persona.TipoTrabajador>
+				<Nomina_movil:TipoTrabajador Descripcion="Vestibulum primis arcu nam accumsan" ID="Risus sed rutrum"/>
+			</Nomina_movil:Persona.TipoTrabajador>
+		</Nomina_movil:Persona>
+	</Nomina_movil:COntenedor.personaSeleccionada>
+</Nomina_movil:COntenedor>

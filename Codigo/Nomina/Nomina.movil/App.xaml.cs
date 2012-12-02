@@ -56,13 +56,30 @@ namespace Nomina.movil
                 // y consumirán energía de la batería cuando el usuario no esté usando el teléfono.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
-
+        
+            
+        CrearBaseDeDatos();
         }
+
+        private void CrearBaseDeDatos()
+        {
+            using (BaseDatosDataContext contexto =
+                new BaseDatosDataContext(cadenaConexion))
+            {
+                if (!contexto.DatabaseExists())
+                {
+                    contexto.CreateDatabase();
+                }
+            }
+        }
+
+        
 
         // Código para ejecutar cuando la aplicación se inicia (p.ej. a partir de Inicio)
         // Este código no se ejecutará cuando la aplicación se reactive
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+
         }
 
         // Código para ejecutar cuando la aplicación se activa (se trae a primer plano)
@@ -107,6 +124,8 @@ namespace Nomina.movil
 
         // Evitar inicialización doble
         private bool phoneApplicationInitialized = false;
+        // Publica y estatica para poder accederla desde cualquier lugar
+        public static string cadenaConexion = "isostore:/Nomina.sdf";
 
         // No agregar ningún código adicional a este método
         private void InitializePhoneApplication()
@@ -138,5 +157,6 @@ namespace Nomina.movil
         }
 
         #endregion
+
     }
 }

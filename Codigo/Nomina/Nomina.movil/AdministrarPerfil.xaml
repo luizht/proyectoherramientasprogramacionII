@@ -21,7 +21,7 @@
 
         <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="NÓMINA" Style="{StaticResource PhoneTextNormalStyle}" TextAlignment="Left" Height="48" Width="444" FontSize="28" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#FF47210E" />
+            <TextBlock x:Name="ApplicationTitle" Text="NÓMINA" Style="{StaticResource PhoneTextNormalStyle}" TextAlignment="Left" Height="48" Width="444" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Normal" Foreground="#FF47210E" />
         </StackPanel>
         <TextBox Grid.Row="1" Height="72" HorizontalAlignment="Left" Name="TxtCedula" Text="" VerticalAlignment="Top" Width="460" Margin="8,170,0,0" Foreground="#FF47210E" FontFamily="Comic Sans MS" FontWeight="Bold">
             <TextBox.InputScope>
@@ -30,11 +30,11 @@
                 </InputScope>
             </TextBox.InputScope>
         </TextBox>
-        <TextBlock Grid.Row="1" Height="30" HorizontalAlignment="Left" Margin="22,146,0,0" Name="LblCedula" Text="Cédula" VerticalAlignment="Top" Foreground="#FF47210E" FontWeight="Bold" FontFamily="Comic Sans MS" Visibility="Visible" />
-        <RadioButton Grid.Row="1" Height="72" HorizontalAlignment="Left" Margin="22,51,0,0" Name="RbnEmpleado" VerticalAlignment="Top" Content="Empleado" Foreground="#FF47210E" />
+        <TextBlock Grid.Row="1" Height="30" HorizontalAlignment="Left" Margin="22,146,0,0" Name="LblCedula" Text="Cédula" VerticalAlignment="Top" Foreground="#FF47210E" FontWeight="Normal" FontFamily="Segoe WP" Visibility="Visible" FontSize="26" />
+        <RadioButton Grid.Row="1" Height="72" HorizontalAlignment="Left" Margin="22,51,0,0" Name="RbnEmpleado" VerticalAlignment="Top" Content="Empleado" Foreground="#FF47210E" FontWeight="Normal" FontSize="24" Click="RbnEmpleado_Click" />
         <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="8,263,0,0" Name="TxtNomEmpleado" Text="" VerticalAlignment="Top" Width="460" Grid.Row="1" />
-        <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="22,241,0,0" Name="LblNombre" Text="Nombre" VerticalAlignment="Top" Grid.Row="1" />
-        <RadioButton Content="Independiente" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="248,51,0,0" Name="RbnIndependiente" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBlock FontFamily="Segoe WP" FontWeight="Normal" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="22,241,0,0" Name="LblNombre" Text="Nombre" VerticalAlignment="Top" Grid.Row="1" FontSize="26" />
+        <RadioButton Content="Independiente" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="248,51,0,0" Name="RbnIndependiente" VerticalAlignment="Top" Grid.Row="1" FontWeight="Normal" FontSize="24" Click="RbnIndependiente_Click" />
         <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="8,359,0,0" Name="TxtSalario" Text="" VerticalAlignment="Top" Width="460" Grid.Row="1">
             <TextBox.InputScope>
                 <InputScope>
@@ -42,7 +42,7 @@
                 </InputScope>
             </TextBox.InputScope>
         </TextBox>
-        <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="22,335,0,0" Name="LblSalario" Text="Salario" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBlock FontFamily="Segoe WP" FontWeight="Normal" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="22,335,0,0" Name="LblSalario" Text="Salario" VerticalAlignment="Top" Grid.Row="1" FontSize="26" />
         <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="261,462,0,0" Name="TxtVlrDia" Text="" VerticalAlignment="Top" Width="207" Grid.Row="1">
             <TextBox.InputScope>
                 <InputScope>
@@ -50,7 +50,7 @@
                 </InputScope>
             </TextBox.InputScope>
         </TextBox>
-        <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="274,438,0,0" Name="LblVlrDia" Text="Valor Día" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBlock FontFamily="Segoe WP" FontWeight="Normal" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="274,438,0,0" Name="LblVlrDia" Text="Valor Día" VerticalAlignment="Top" Grid.Row="1" FontSize="26" />
         <TextBox FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="72" HorizontalAlignment="Left" Margin="8,462,0,0" Name="TxtVlrHora" Text="" VerticalAlignment="Top" Width="207" Grid.Row="1">
             <TextBox.InputScope>
                 <InputScope>
@@ -58,7 +58,7 @@
                 </InputScope>
             </TextBox.InputScope>
         </TextBox>
-        <TextBlock FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="22,438,0,0" Name="LblVlrHora" Text="Valor Hora" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBlock FontFamily="Segoe WP" FontWeight="Normal" Foreground="#FF47210E" Height="30" HorizontalAlignment="Left" Margin="22,438,0,0" Name="LblVlrHora" Text="Valor Hora" VerticalAlignment="Top" Grid.Row="1" FontSize="26" />
         <!--ContentPanel. Colocar aquí el contenido adicional-->
         <Grid.Background>
             <ImageBrush ImageSource="/Nomina.movil;component/Images/FAdministrar.png" />
@@ -67,7 +67,7 @@
  
     <!--Código de ejemplo que muestra el uso de ApplicationBar-->
    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FF47210E">
             <shell:ApplicationBarIconButton x:Name="BtnGuardar" IconUri="/icons/appbar.save.rest.png" Text="Guardar" Click="BtnGuardar_Click"/>
             <shell:ApplicationBarIconButton x:Name="BtnCancelar" IconUri="/icons/appbar.cancel.rest.png" Text="Cancelar" Click="BtnCancelar_Click"/>
         </shell:ApplicationBar>

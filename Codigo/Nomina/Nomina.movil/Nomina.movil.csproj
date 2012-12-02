@@ -65,11 +65,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BaseDatos.cs">
+      <DependentUpon>BaseDatos.dbml</DependentUpon>
+    </Compile>
     <Compile Include="BaseDatos.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDatos.dbml</DependentUpon>
     </Compile>
+    <Compile Include="COntenedor.cs" />
     <Compile Include="Lib\TiltEffect.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -77,14 +81,17 @@
     <Compile Include="AdministrarPerfil.xaml.cs">
       <DependentUpon>AdministrarPerfil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IngresarValores.xaml.cs">
-      <DependentUpon>IngresarValores.xaml</DependentUpon>
-    </Compile>
     <Compile Include="AcercaDe.xaml.cs">
       <DependentUpon>AcercaDe.xaml</DependentUpon>
     </Compile>
     <Compile Include="GenerarInforme.xaml.cs">
       <DependentUpon>GenerarInforme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado.xaml.cs">
+      <DependentUpon>Empleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Independiente.xaml.cs">
+      <DependentUpon>Independiente.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,15 +108,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IngresarValores.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="AcercaDe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GenerarInforme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Empleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Independiente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +147,9 @@
     <Content Include="icons\appbar.cancel.rest.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="icons\appbar.close.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="icons\appbar.refresh.rest.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -154,6 +168,8 @@
     <Resource Include="Images\FAdministrar.png" />
     <Resource Include="Images\Guardar.png" />
     <Resource Include="Images\Cancelar.png" />
+    <Resource Include="Images\FValores.png" />
+    <Resource Include="Images\FValores1.png" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +177,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <DesignData Include="SampleData\COntenedorSampleData.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </DesignData>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

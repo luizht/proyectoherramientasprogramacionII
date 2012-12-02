@@ -7,17 +7,32 @@
       <Column Name="VlrDia" Type="System.Int32" CanBeNull="false" />
       <Column Name="VlrHora" Type="System.Int32" CanBeNull="false" />
       <Column Name="IdTipoTrabajador" Type="System.String" CanBeNull="false" />
-      <Association Name="Persona_TotalEmpleado" Member="TotalEmpleado" ThisKey="Cedula" OtherKey="Cedula" Type="TotalEmpleado" />
+      <Association Name="TipoTrabajador_Persona" Member="TipoTrabajador" ThisKey="IdTipoTrabajador" OtherKey="ID" Type="TipoTrabajador" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="" Member="TotalEmpleado">
-    <Type Name="TotalEmpleado">
-      <Column Member="Vlrempleado" Type="System.String" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Member="TipodeHora" Type="System.String" CanBeNull="false" />
-      <Column Member="Total" Type="System.Int32" CanBeNull="false" />
-      <Column Member="Cantidad" Type="System.Int32" CanBeNull="false" />
-      <Column Member="Cedula" Type="System.String" CanBeNull="false" />
-      <Association Name="Persona_TotalEmpleado" Member="Persona" ThisKey="Cedula" OtherKey="Cedula" Type="Persona" IsForeignKey="true" />
+  <Table Name="" Member="TipoTrabajador">
+    <Type Name="TipoTrabajador">
+      <Column Name="ID" Type="System.String" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" CanBeNull="false" />
+      <Association Name="TipoTrabajador_Persona" Member="Persona" ThisKey="ID" OtherKey="IdTipoTrabajador" Type="Persona" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Ingresos">
+    <Type Name="Ingresos">
+      <Column Name="Identificador" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" CanBeNull="false" />
+      <Column Name="Deducciones" Type="System.Int64" CanBeNull="true" />
+      <Column Name="TipoLabor" Type="System.String" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int64" CanBeNull="false" />
+      <Column Name="Empresa" Type="System.String" CanBeNull="true" />
+      <Association Name="TipoHora_Ingresos" Member="TipoHora" ThisKey="TipoLabor" OtherKey="Id" Type="TipoHora" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="TipoHora">
+    <Type Name="TipoHora">
+      <Column Name="Id" Type="System.String" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" CanBeNull="false" />
+      <Association Name="TipoHora_Ingresos" Member="Ingresos" ThisKey="Id" OtherKey="TipoLabor" Type="Ingresos" />
     </Type>
   </Table>
 </Database>

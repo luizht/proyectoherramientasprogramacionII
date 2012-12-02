@@ -12,6 +12,18 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
+	<phone:PhoneApplicationPage.Resources>
+		<DataTemplate x:Key="PersonaTemplate">
+			<StackPanel>
+				<TextBlock Text="{Binding Cedula}"/>
+				<TextBlock Text="{Binding IdTipoTrabajador}"/>
+				<TextBlock Text="{Binding Nombre}"/>
+				<TextBlock Text="{Binding Salario}"/>
+				<TextBlock Text="{Binding VlrDia}"/>
+				<TextBlock Text="{Binding VlrHora}"/>
+			</StackPanel>
+		</DataTemplate>
+	</phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
     <Grid x:Name="LayoutRoot">
@@ -22,11 +34,11 @@
 
         <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="Nómina" Style="{StaticResource PhoneTextNormalStyle}" Foreground="#FF47210E" FontFamily="Comic Sans MS" FontWeight="Bold" Height="60" FontSize="36" TextAlignment="Left" FontStyle="Italic" />
+            <TextBlock x:Name="ApplicationTitle" Text="Nómina" Style="{StaticResource PhoneTextNormalStyle}" Foreground="#FF47210E" FontFamily="Segoe WP" FontWeight="Normal" Height="60" FontSize="40" TextAlignment="Left" FontStyle="Normal" />
         </StackPanel>
 
         <!--ContentPanel. Colocar aquí el contenido adicional-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" DataContext="{Binding}">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="16,0,8,0" DataContext="{Binding}">
             <Grid.Background>
                 <ImageBrush />
             </Grid.Background>
@@ -38,7 +50,7 @@
  
     <!--Código de ejemplo que muestra el uso de ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FF47210E">
             <shell:ApplicationBarIconButton x:Name="BtnGuardar" IconUri="/icons/appbar.save.rest.png" Text="Guardar" Click="BtnGuardar_Click" IsEnabled="True"/>
             <shell:ApplicationBarIconButton x:Name="BtnCancelar" IconUri="/icons/appbar.cancel.rest.png" Text="Cancelar" Click="BtnCancelar_Click"/>
         </shell:ApplicationBar>
